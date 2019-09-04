@@ -37,7 +37,11 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
-                Handler\TestDoctrineConnectionHandler::class => Handler\Factory\TestDoctrineConnectionHandlerFactory::class
+                Handler\TestDoctrineConnectionHandler::class => Handler\Factory\TestDoctrineConnectionHandlerFactory::class,
+                //Registrando Serviços
+                Service\TipoUsuarioService::class => Service\Factory\TipoUsuarioServiceFactory::class,
+                Service\UsuarioService::class => Service\Factory\UsuarioServiceFactory::class,
+                Service\MensagemService::class => Service\Factory\MensagemServiceFactory::class
             ],
         ];
     }
