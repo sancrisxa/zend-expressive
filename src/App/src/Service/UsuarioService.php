@@ -5,7 +5,7 @@ namespace App\Service;
 
 use App\Entity\TipoUsuario;
 use App\Entity\Usuario;
-use Zend\Hydrator\ClassMethods;
+use Zend\Hydrator\ClassMethodsHydrator as ClassMethod;
 
 /**
 * Class UsuarioService
@@ -27,7 +27,7 @@ class UsuarioService extends ServiceAbstract
             $userType = $this->em->getReference(TipoUsuario::class, $data['tipoUsuario']);
             $data['tipoUsuario'] = $userType;
             $data['dataNascimento'] = new \DateTime($data['dataNascimento']);
-            $classMethods = new ClassMethods();
+            $classMethods = new ClassMethod();
             $classMethods->hydrate($data, $entity);
             $this->em->persist($entity);
             $this->em->flush();

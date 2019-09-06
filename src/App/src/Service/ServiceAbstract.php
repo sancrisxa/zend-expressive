@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use Doctrine\ORM\EntityManager;
-use Zend\Hydrator\ClassMethods;
+use Zend\Hydrator\ClassMethodsHydrator as ClassMethods;
 
 /*** Class ServiceAbstract
 * @package App\Service

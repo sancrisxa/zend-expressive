@@ -5,7 +5,7 @@ namespace App\Service;
 
 use App\Entity\Mensagem;
 use App\Entity\Usuario;
-use Zend\Hydrator\ClassMethods;
+use Zend\Hydrator\ClassMethodsHydrator as ClassMethods;
 
 /**
 * Class MensagemService
